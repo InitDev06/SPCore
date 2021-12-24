@@ -26,7 +26,7 @@ permissions:
         children:
           - spcore.bypass.world.build
           - spcore.bypass.world.damage
-          - spcore.bypass.world.interact
+          - spcore.bypass.world.interact \\ deprecated, is not in use.
           - spcore.bypass.world.void
           - spcore.bypass.world.hunger
           - spcore.bypass.chat.cooldown
