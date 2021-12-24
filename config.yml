@@ -1,0 +1,210 @@
+options: 
+  configVersion: "1"
+  # don't touch this value.
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~
+  # |                       |
+  # |   GENERAL - OPTIONS   |
+  # |                       |
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~
+  announce_entry: true
+  # when the player join to server will be announce your entry.
+  join:
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    default_message: "<player_group_prefix> &7<player> &8- &7Has joined to the server."
+    groups:
+      default: 
+        # the name of the rank group, if not exists, will be use the def.
+        message: "&7<player> &8- &7Has joined to the server."
+        # the message of join for the group.
+      ceo: 
+        message: "&c[Admin] &f<player> &8- &eHas joined to the server."
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+  announce_quit: true
+  # when the player leave the server will be announce your exit.
+  quit:
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    default_message: "<player_group_prefix> &7<player> &8- &7If has left the server."
+    groups:
+      default: 
+        # the name of the rank group, if not exists, will be use the default_message.
+        message: "&7<player> &8- &7If has left the server."
+        # the message of quit for the group.
+      ceo: 
+        message: "&c[Admin] &f<player> &8- &eIf has left the server."
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+  show_fireworks: true
+  # will be show fireworks when the player join.
+  play_effects: true
+  teleport_to_lobby: true
+  # the player will be teleported to lobby when join.
+  actionbar: true
+  # will be send a actionbar message to user.
+  actionbar_message: "&6Welcomed!"
+  give_speed: true
+  # the players will be receive Speed II to join.
+  motd_message: true
+  # will be send a privated message to user.
+  motd: |-
+    &l
+    &7   Server is running &6SPCore
+    &l
+    &f        Release: &e1.0
+    &f      Author: &biAlqjDV
+    &l
+    
+  social_networks: true
+  # will be send to user the networks of server.
+  networks: 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    # if you like add other, change the already exists,
+    # only change your parameters.
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    store: 
+      name: "&6 Store"
+      # this is the name.
+      link: https://store.server.net/
+      # this is the link of the network.
+      description: "&a&lCLICK HERE TO GET THE LINK"
+      # and this is the hover message will be show to user.
+    forum: 
+      name: "&e Forum"
+      link: https://forum.server.net/
+      description: "&a&lCLICK HERE TO GET THE LINK"
+    youtube: 
+      name: "&c Youtube"
+      link: https://youtube.com/serverName
+      description: "&a&lCLICK HERE TO GET THE LINK"
+    discord: 
+      name: "&9 Discord"
+      link: https://discord.server.net/
+      description: "&a&lCLICK HERE TO GET THE LINK"
+    
+  titles: 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    show_titles: true
+    # define the parameters of time for the titles.
+    fadeIn: 20
+    showTime: 40
+    fadeOut: 20
+    title_joined: "&aWelcome to Server"
+    subtitle_joined: "&b&l<player>"
+    
+  sounds: 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    reproduce_sounds: true
+    value_perm: ENTITY_ITEM_BREAK
+    value_reload: ENTITY_IRON_GOLEM_REPAIR
+    value_cooldown: BLOCK_NOTE_BLOCK_PLING
+    value_join: UI_BUTTON_CLICK
+    value_quit: BLOCK_NOTE_BLOCK_PLING
+    value_cmd: ENTITY_PLAYER_DEATH
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    value_world_event: ENTITY_VILLAGER_DEATH
+    # this sound only applys for any events.
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    value_vanish: ENTITY_PLAYER_ATTACK_SWEEP
+    value_scoreboard: BLOCK_NOTE_BLOCK_XYLOPHONE
+    value_gamemode: UI_BUTTON_CLICK
+    value_flight: ENTITY_ENDER_DRAGON_FLAP
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    vol: 1.0
+    pitch: 1.0
+    # this is the volumen and the pitch of the sounds.
+    
+  scoreboard: 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    show_to_join: true
+    # show the scoreboard to the players when join.
+    per_worlds: true
+    # the scoreboard can run per worlds, recommended for survival.
+    refresh: true
+    # toggle the update for scoreboard, the placeholders will not update.
+    delay: 20
+    period: 20
+    # this is the time of update, 20 ticks equals 1s.
+    default: 
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~
+      name: "&6&lLOBBY"
+      # this is the title of the scoreboard.
+      lines: |-
+        &l
+        &fNick: &e<player>
+        &fRank: &r<player_group_prefix>
+        &fLevel: &6<player_level>
+        &l
+        &fWorld: &b<player_world>
+        &fExp: &a<player_exp>
+        &fLevel: &a<player_level>
+        &l
+        &fServer: &d#1
+        &fConnected: &d<connected>&7/&d<max_connected>
+        &l
+        &6www.spigotmc.org
+    types: 
+      # to add other scoreboard, insert the world name.
+      world: 
+        name: "&a&lWORLD"
+        lines: |-
+          &l
+          &fNick: &e<player>
+          &fRank: &r<player_group_prefix>
+          &fLevel: &6<player_level>
+          &l
+          &fWorld: &b<player_world>
+          &fExp: &a<player_exp>
+          &fLevel: &a<player_level>
+          &l
+          &fKills: &c<player_kills>
+          &fConnected: &d<connected>&7/&d<max_connected>
+          &l
+          &6www.spigotmc.org
+    
+  fireworks: 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    type: CREEPER
+    # type of effect for the firework.
+    power: 5
+    # the power of the firework.
+    
+  effects: 
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    type: FIREWORK_SHOOT
+    # type of effect.
+    power: 5
+    # power of effect.
+  
+  chat:
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    active: true
+    # enable/disable chat format, if is false will be use the default of Spigot.
+    cooldown: 3
+    # this time must wait the users to send other message.
+    default_format: "<player_group_prefix> &7<player> &8- &7<message>"
+    # default format if the group doesn't exists.
+    groups:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~
+      default:
+        format: "&7<player> &8- &7<message>"
+      ceo:
+        format: "&c[Admin] &7<player_display_name> &8- &f<message>"
+  
+  commands:
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~
+    block: true
+    # if is true the plugin will be block the commands of this list. (This also applys for the words)
+    cooldown: 5
+    # this cooldown applys only for the plugin commands, not for blocked commands.
+    list:
+      # to add a new command only add using the format "- /<command>".
+      - /bungee
+      - /about
+      - /pl
+      - /plugins
+      - /?
+      - /bukkit:pl
+      - /ver
+      - /version
+    # ~~~~~~~~~~~~~~~~~~~~~~~~~~

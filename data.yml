@@ -1,0 +1,13 @@
+build: false
+damage: false
+hunger: false
+void: false
+thunder: false
+entities: false
+lobby:
+  world: ''
+  x:
+  y:
+  z:
+  yaw:
+  pitch: 

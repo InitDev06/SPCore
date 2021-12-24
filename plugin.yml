@@ -1,0 +1,72 @@
+name: SPCore
+main: org.benja.coder.spcore.SPCore
+version: 10.1
+api-version: 1.17
+author: iAlqjDV
+website: https://www.spigotmc.org/members/ialqjdv.1471925/
+description: Customize your lobby to maximum with multiples options.
+loadbefore: [PlaceholderAPI, Vault]
+softdepend: [PlaceholderAPI, Vault]
+permissions:
+  spcore.admin:
+    children:
+      spcore.cmd.*:
+        children:
+          - spcore.cmd.list
+          - spcore.cmd.reload
+          - spcore.cmd.scoreboard
+          - spcore.cmd.gamemode
+          - spcore.cmd.flight
+          - spcore.cmd.teleport
+          - spcore.cmd.nick
+          - spcore.cmd.vanish
+          - spcore.cmd.setlobby
+          - spcore.cmd.lobby
+      spcore.bypass.*:
+        children:
+          - spcore.bypass.world.build
+          - spcore.bypass.world.damage
+          - spcore.bypass.world.interact
+          - spcore.bypass.world.void
+          - spcore.bypass.world.hunger
+          - spcore.bypass.chat.cooldown
+          - spcore.bypass.chat.commands
+          - spcore.bypass.cmd.vanish
+      spcore.event.*:
+        children:
+          - spcore.event.join.firework
+          - spcore.event.join.effect
+          - spcore.event.join.sound
+          - spcore.event.quit.sound
+          - spcore.event.chat.color
+      spcore.log.*:
+        children:
+          - spcore.log.cmd
+commands:
+  spcore:
+    aliases: [spc]
+    description: Main Command.
+  flight:
+    aliases: [fly, volar]
+    description: Toggle your flight mode.
+  scoreboard:
+    aliases: [sb]
+    description: Toggle the scoreboard visibility.
+  setlobby:
+    aliases: [sethub]
+    description: Save the lobby of the server.
+  lobby: 
+    aliases: [hub]
+    description: Teleport to lobby location.
+  vanish:
+    aliases: [v]
+    description: Hide you of other players.
+  teleport:
+    aliases: [tp]
+    description: Teleport to other player.
+  nick:
+    aliases: [name]
+    description: Change your displayname and your listname.
+  gamemode:
+    aliases: [gm]
+    description: Change your gamemode.

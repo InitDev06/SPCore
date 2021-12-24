@@ -1,0 +1,114 @@
+messages:
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # |                        |
+  # |   GENERAL - MESSAGES   |
+  # |                        |
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  prefix: "&6SPCore &8| &7"
+  # the prefix only applys for the /spcore command.
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  not_console: "&cThis command can't be executed in console."
+  not_perm: "&cYou must have the permission &7(&e<permission>&7) &cto use this."
+  not_command: "&cThis command is not been added to plugin."
+  not_connected: "&cThis player is not connected."
+  not_file: "&cThis file doesn't exists." 
+  not_connected: "&cThis player is not connected."
+  list_cmds: |-
+    &l
+    &6       SPCore &7by &aiAlqjDV
+    &l
+    &8 - &a/spcore &7| &a/spc &fMain Command.
+    &8 - &a/spc list &fShow all commands of plugin.
+    &8 - &a/spc reload <file> &fReload the plugin files.
+    &8 - &a/scoreboard  &fToggle the score visibility.
+    &8 - &a/gamemode &fChange your gamemode.
+    &8 - &a/flight &fToggle your flight mode.
+    &8 - &a/setlobby &fSave the lobby location.
+    &8 - &a/lobby &fTeleport to lobby.
+    &8 - &a/nick &fChange your display name.
+    &8 - &a/teleport &fTeleport to other player.
+    &8 - &a/vanish &fHide you of the other players.
+    &l
+    
+  reload_usage: "To reload a file, introduce your id &e<config/data/lang>&7."
+  reload_config: "&6config.yml &7was reloaded in &e<time>ms&7."
+  reload_data: "&6data.yml &7was reloaded in &e<time>ms&7."
+  reload_lang: "&6lang_en.yml &7was reloaded in &e<time>ms&7."
+  cooldown_cmd: "&cYou must wait &e<time>s &cto use this command again."
+  cooldown_chat: "&cYou must wait &e<time>s &cto send other message."
+  blocked_cmd: "&8[&c!&8] &cThis command was blocked by the &c&lSTAFF&c."
+  cmd_log: "&8[&c!&8] &cThe player &e<player> &chas try execute the command &7(&3<command>&7)."
+  not_place: "&cYou can't place blocks here."
+  not_break: "&cYou can't break blocks here."
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  
+  command: 
+    flight:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      enabled: "&7The flight mode was &aenabled&7."
+      disabled: "&7The flight mode was &cdisabled&7."
+      
+      title_enabled: "&a&lFLIGHT ACTIVATED"
+      subtitle_enabled: "&7Now you can fly."
+    
+      title_disabled: "&c&lFLIGHT DEACTIVATED"
+      subtitle_disabled: "&7Now can't fly."
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    gamemode:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      usage: "&7To change your gamemode, use &b/gm <mode>&7."
+      null_identifier: "&cThis gamemode doesn't exists, or your id is invalid."
+      
+      survival: "&7Gamemode updated to &aSURVIVAL&7."
+      creative: "&7Gamemode updated to &cCREATIVE&7."
+      adventure: "&7Gamemode updated to &bADVENTURE&7."
+      spectator: "&7Gamemode updated to &eSPECTATOR&7."
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    lobby:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      setup: "&aThe lobby location was saved correctly."
+      teleport: "&aWas teleported to lobby."
+      unknown: "&cThis location doesn't exists."
+      error: "&cAn occurred a error while saving the lobby location."
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      
+    nick:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      usage: "&7Insert your new &enickname&7."
+      reset: "&7Your nickname has been reset."
+      changed: "&7Your nickname now is &a<nickname>"
+      already_use: "&cThis nickname is in use."
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    teleport:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      usage: "&7Insert the name of a player."
+      teleported: "&7Was teleported to player &a<target>"
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    vanish:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      enabled: "&cNow the players can't view you."
+      bypass: "&8[&c!&8] &cAny players can view you."
+      disabled: "&aThe players now can view you."
+      
+      title_enabled: "&a&lVANISH ENABLED"
+      subtitle_enabled: "&7Has been removed for the other players."
+      
+      title_disabled: "&c&lVANISH DISABLED"
+      subtitle_disabled: "&7Now the players can view you."
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+    
+    scoreboard:
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
+      enabled: "&aThe scoreboard was activated."
+      disabled: "&cThe scoreboard was deactivated."
+      
+      title_enabled: "&a&lSCOREBOARD ACTIVATED"
+      subtitle_enabled: "&7Now the scoreboard has back."
+      
+      title_disabled: "&c&lSCOREBOARD ACTIVATED"
+      subtitle_disabled: "&7Now the scoreboard has been removed."
+      # ~~~~~~~~~~~~~~~~~~~~~~~~~~
