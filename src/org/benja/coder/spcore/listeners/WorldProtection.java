@@ -193,7 +193,7 @@ public class WorldProtection implements Listener {
 				World world = Bukkit.getServer().getWorld(data.getString("lobby.world"));
 				
 				Location location = new Location(world, x, y, z, yaw, pitch);
-				location.subtract(0.5D, 0.0D, 0.5D);
+				location.add(x > 0 ? 0.5 : -0.5, 0.0, z > 0 ? 0.5 : -0.5);
 				if(ev.getCause() == EntityDamageEvent.DamageCause.VOID) {
 					player.setFallDistance(0.0F);
 					

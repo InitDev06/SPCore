@@ -3,10 +3,13 @@ package org.benja.coder.spcore.listeners;
 import org.benja.coder.spcore.SPCore;
 import org.benja.coder.spcore.color.Msg;
 import org.benja.coder.spcore.utility.StringUtil;
+import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Effect;
 import org.bukkit.FireworkEffect;
 import org.bukkit.GameMode;
+import org.bukkit.Location;
+import org.bukkit.World;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
@@ -22,6 +25,26 @@ public class PlayerJoinListener implements Listener {
 	
 	public PlayerJoinListener(SPCore spc) {
 		this.spc = spc;
+	}
+	
+	@EventHandler
+	public void onTeleport(PlayerJoinEvent ev) {
+		Player player = ev.getPlayer();
+		FileConfiguration data = spc.getData();
+		Double x = Double.valueOf(data.getInt("lobby.x"));
+		Double y = Double.valueOf(data.getInt("lobby.y"));
+		Double z = Double.valueOf(data.getInt("lobby.z"));
+		
+		Float yaw = Float.valueOf(data.getInt("lobby.yaw"));
+		Float pitch = Float.valueOf(data.getInt("lobby.pitch"));
+		
+		World world = Bukkit.getServer().getWorld(data.getString("lobby.world"));
+		
+		if(world != null) {
+			Location location = new Location(world, x, y, z, yaw, pitch);
+			location.add(x > 0 ? 0.5 : -0.5, 0.0, z > 0 ? 0.5 : -0.5);
+			player.teleport(location);
+		}
 	}
 	
 	@EventHandler
