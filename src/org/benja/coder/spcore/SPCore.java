@@ -238,7 +238,6 @@ public class SPCore extends JavaPlugin implements Listener {
 		getCommand("flight").setExecutor(new FlightCommand(this));
 		getCommand("scoreboard").setExecutor(new ScoreboardCommand(this));
 		getCommand("setlobby").setExecutor(new SetupCommand(this));
-		getCommand("lobby").setExecutor(new LobbyCommand(this));
 		getCommand("vanish").setExecutor(new VanishCommand(this));
 		getCommand("teleport").setExecutor(new TeleportCommand(this));
 		getCommand("nick").setExecutor(new NickerCommand(this));
