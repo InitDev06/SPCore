@@ -1,6 +1,6 @@
 name: SPCore
 main: org.benja.coder.spcore.SPCore
-version: 10.1
+version: 10.2
 api-version: 1.17
 author: iAlqjDV
 website: https://www.spigotmc.org/members/ialqjdv.1471925/
@@ -26,7 +26,7 @@ permissions:
         children:
           - spcore.bypass.world.build
           - spcore.bypass.world.damage
-          - spcore.bypass.world.interact \\ deprecated, is not in use.
+          - spcore.bypass.world.interact
           - spcore.bypass.world.void
           - spcore.bypass.world.hunger
           - spcore.bypass.chat.cooldown
@@ -55,9 +55,6 @@ commands:
   setlobby:
     aliases: [sethub]
     description: Save the lobby of the server.
-  lobby: 
-    aliases: [hub]
-    description: Teleport to lobby location.
   vanish:
     aliases: [v]
     description: Hide you of other players.
